@@ -2,13 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>Latest</LangVersion>
     <IsPackable>true</IsPackable>
     <VersionPrefix>1.0.0</VersionPrefix>
     <PackageTags>DbUp;Db Up;Db;Logging;Logger;Log;</PackageTags>
     <Authors>Ibrahim Abdelkareem</Authors>
-    <Nullable>enable</Nullable>
-    <LangVersion>Latest</LangVersion>
     <PackageProjectUrl>https://github.com/iabdelkareem/dbup-extensions.git</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>
       The package enables using Microsoft.Extensions.Logging.Abstractions.ILogger with DbUp.
@@ -17,7 +21,8 @@
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="4.5.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
