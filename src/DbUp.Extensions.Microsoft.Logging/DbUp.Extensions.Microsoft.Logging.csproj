@@ -15,7 +15,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>
-      The package enables using Microsoft.Extensions.Logging.Abstractions.ILogger with DbUp.
+      This package extends DbUp logging by enabling using Microsoft.Extensions.Logging.ILogger that's registered in Microsoft Dependency Injection (i.e., IServiceProvider).
     </Description>
   </PropertyGroup>
 
