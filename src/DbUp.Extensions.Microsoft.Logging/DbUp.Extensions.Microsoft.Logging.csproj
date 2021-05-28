@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>Latest</LangVersion>
+    <IsPackable>true</IsPackable>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <PackageTags>DbUp;Db Up;Db;Logging;Logger;Log;</PackageTags>
+    <Authors>Ibrahim Abdelkareem</Authors>
+    <PackageProjectUrl>https://github.com/iabdelkareem/dbup-extensions.git</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>
+      This package extends DbUp logging by enabling using Microsoft.Extensions.Logging.ILogger that's registered in Microsoft Dependency Injection (i.e., IServiceProvider).
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-core" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>DbUp.Extensions.Microsoft.Logging.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
