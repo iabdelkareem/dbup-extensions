@@ -17,7 +17,12 @@
     <Description>
       This package extends DbUp logging by enabling using Microsoft.Extensions.Logging.ILogger that's registered in Microsoft Dependency Injection (i.e., IServiceProvider).
     </Description>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="dbup-core" Version="4.5.0" />
