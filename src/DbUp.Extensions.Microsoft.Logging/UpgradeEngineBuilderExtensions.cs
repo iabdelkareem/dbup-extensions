@@ -10,6 +10,11 @@ namespace DbUp.Extensions.Logging
         public static UpgradeEngineBuilder AddLoggerFromServiceProvider(this UpgradeEngineBuilder upgradeEngineBuilder, IServiceProvider serviceProvider)
         {
             var logger = (ILogger<UpgradeEngine>) serviceProvider.GetService(typeof(ILogger<UpgradeEngine>));
+            return upgradeEngineBuilder.AddLogger(logger);
+        }
+
+        public static UpgradeEngineBuilder AddLogger(this UpgradeEngineBuilder upgradeEngineBuilder, ILogger<UpgradeEngine> logger)
+        {
             upgradeEngineBuilder.LogTo(new UpgradeLogWrapper(logger));
             return upgradeEngineBuilder;
         }

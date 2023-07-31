@@ -4,6 +4,11 @@
 
 
 ## To Use
+
+The two ways to use this extension are described below. Both have the same result, but are different ways to pass in the logger.
+
+### Using Service Provider
+
 1. Add `using DbUp.Extensions.Logging;`
 2. Call `AddLoggerFromServiceProvider()` on the `UpgradeEngineBuilder` passing `IServiceProvider` as an argument. Check the example below. 
 
@@ -12,6 +17,19 @@
         .SqlDatabase(con)
         .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
         .AddLoggerFromServiceProvider(serviceProvider)
+        .Build();
+```
+
+### Using Logger
+
+1. Add `using DbUp.Extensions.Logging;`
+2. Call `AddLogger()` on the `UpgradeEngineBuilder` passing `ILogger<UpgradeEngine>` as an argument. Check the example below. 
+
+```csharp
+    DeployChanges.To
+        .SqlDatabase(con)
+        .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
+        .AddLogger(logger)
         .Build();
 ```
 
